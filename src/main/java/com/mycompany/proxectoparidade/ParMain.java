@@ -9,19 +9,29 @@ import java.util.Scanner;
  */
 
 /**
- *
+ *Comproba a paridade dun número enteiro
  * @author A21SilvanaAF
  */
 public class ParMain {
+    
+    private static final String EL_NUMERO_ES_IMPAR = "El numero es impar";
+    private static final String EL_NUMERO_ES_PAR = "El numero es par";
 
     /**
-     * @param args the command line arguments
+     * le un número estandar e comproba a súa paridade
+     * @param args argumentos da liña de comandos
      */
     public static void main(String[] args) {
         Scanner entrada=new Scanner(System.in);
         int numeroProba=lerNumero(entrada);
         System.out.println(comprobarParidade(numeroProba));
     }
+    
+    /**
+     * Indica se numeroProba é par ou impar
+     * @param numeroProba número enteiro a comprobar
+     * @return cadea indicando a paridade
+     */
 
     static String comprobarParidade(int numeroProba) {
         String resultado;
@@ -33,12 +43,23 @@ public class ParMain {
         }
         return resultado;
     }
+    
+    /**
+     * verifica se numeroProba é par
+     * @param numero Proba número enteiro a comprobar
+     * @return booleano con valor true se o número é par
+     */
 
     static boolean verificaPar(int numeroProba) {
         return numeroProba%2==0;
     }
-    private static final String EL_NUMERO_ES_IMPAR = "El numero es impar";
-    private static final String EL_NUMERO_ES_PAR = "El numero es par";
+    
+    /**
+     * Le o número da entrada estándar
+     * @param in representa a entrada estándar
+     * @return enteiro inserido polo usuario
+     */
+    
 
     private static int lerNumero(Scanner in) {
         System.out.println("Introduce un número:");
